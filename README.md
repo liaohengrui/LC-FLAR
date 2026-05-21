@@ -6,37 +6,18 @@ The code supports learning-based lossless image compression and serves as the of
 providing encoding and decoding through ```encode.py``` and ```decode.py```. The environment can be easily set up using ```environment.yml``` with Conda.
 ### Code Information
 ```
-|── img : directory containing test images
+|──  img : directory containing test images
 |── utils : files for utility functions
 |── custom_layers.py : implementation of masked convolution layers
 |── decode.py : decodes compressed files into images
 |── encode.py : encodes images into compressed format
 |── environment.yml : specification of the virtual environment
 |── flar_model.py and flar_model_eval.py : architecture definition of LC-FLAR
-└── gaussmixturemodel.py : CDF-based probabilistic modeling
+|── gaussmixturemodel.py : CDF-based probabilistic modeling
+└── ckp_best.tar  model used in this study 
 ```
 Mask convolution is implemented in ```custom_layers.py```. The checkerboard strategy is implemented in lines 71–120 of ```encode.py```. 
 The for-loop in ```encode.py``` realizes the parallel autoregressive process described in Fig. 3(d-opt) of the paper. The Gaussian probability modeling is implemented in ```gaussmixturemodel.py```.
-
-### Dataset Information and Model
-Train Dataset
-
-[DIV2K] (https://data.vision.ee.ethz.ch/cvl/DIV2K/)
-
-Test Original Dataset
-
-[COCO] (https://cocodataset.org/)
-
-[VOC] (https://www.robots.ox.ac.uk/vgg/projects/pascal/VOC/)
-
-[Kodak] (https://r0k.us/graphics/kodak/)
-
-[AID] (https://captain-whu.github.io/AID/)
-
-[Colonoscopy] (https://polyp.grand-challenge.org/CVCClinicDB/)
-
-To facilitate reproducibility, the experimental dataset and model used in this study are publicly available at https://zenodo.org/records/18837771.
-
 ## Usage Instructions
 
 1. Place the image in `./img/`.
