@@ -1,4 +1,4 @@
-# [LC-FLAR: Learned Lossless Image Compression with Fast and Lightweight Autoregressive Model]
+# [Learned Lossless Image Compression with Fast and Lightweight Autoregressive Model]
 
 
 ## Description
